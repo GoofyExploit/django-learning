@@ -1,1 +1,4 @@
 django_venv/
+django_tutorial/db.sqlite3
+django_tutorial/mysite/__pycache__
+django_tutorial/polls/__pycache__
