@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+  <h1><u>All Books</u></h1>
+  <ul>
+    {% for book in books %}
+      <li><a href="{% url 'books:detail' book.slug %}">{{book.title}}</a> - {{book.author}}</li>
+    {% endfor %}
+  </ul>
+  <strong>
+    <h3><a href="{% url 'books:about' %}">About Page</a></h3>
+  </strong>
+  <strong>
+    <h3><a href="{% url 'books:genre' %}">Genres</a></h3>
+  </strong>
+</body>
+</html>

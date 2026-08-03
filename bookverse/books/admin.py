@@ -1,5 +1,4 @@
 from django.contrib import admin
-from movies.models import Movie
-
+from books.models import Book
 # Register your models here.
-admin.site.register(Movie)
+admin.site.register(Book)

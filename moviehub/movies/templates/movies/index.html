@@ -3,22 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MoviesHub</title>
+  <title>Movies</title>
 </head>
 <body>
-  <h1>{{ heading }}</h1>
-  <p>Created by {{ owner }}</p>
-  <p>{{ year }}</p><br>
-  {% if logged_in %}
-  <h2>Welcome back!</h2>
-  {% else %}
-  <h2>Please log in.</h2>
-  {% endif %}
-  <ul>
+  <h1>All the movies in our collection: </h1>
+  <ol>
     {% for movie in movies %}
-    <li>{{ movie }}</li>
+      <li><a href="{% url 'movies:detail' movie.slug %}">{{movie.title}}</a> - {{movie.year}}</li>
     {% endfor %}
-  </ul>
-  <a href="{% url 'movies:about' %}">About</a>
+  </ol>
+
 </body>
 </html>
