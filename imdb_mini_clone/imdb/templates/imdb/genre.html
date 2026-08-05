@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{genre}}</title>
+</head>
+<body>
+  <strong>All Movies in {{genre}}</strong> <br>
+  <ul>
+    {% for movie in movie %}
+    <li><a href="{% url 'imdb:details' movie.slug %}">{{movie}}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

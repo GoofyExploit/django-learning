@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actors</title>
+</head>
+<body>
+  <strong>All Actors</strong> <br>
+  <ul>
+    {% for actor in actors %}
+    <li><a href="{% url 'netflix:actor' actor %}">{{actor}}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

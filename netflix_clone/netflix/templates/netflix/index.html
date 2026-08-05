@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+  <strong>This is the index page of Netflix django app.</strong>
+  <ul>
+    <li><a href="{% url 'netflix:movies' %}">Movies</a></li>
+    <li><a href="{% url 'netflix:genres' %}">Genres</a></li>
+    <li><a href="{% url 'netflix:actors' %}">Actors</a></li>
+  </ul>
+</body>
+</html>

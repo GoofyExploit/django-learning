@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+  <strong>This is the index page of Imdb clone django app.</strong>
+  <ul>
+    <li><a href="{% url 'imdb:movies' %}">Movies</a></li>
+    <li><a href="{% url 'imdb:genres' %}">Genres</a></li>
+    <li><a href="{% url 'imdb:actors' %}">Actors</a></li>
+    <li><a href="{% url 'imdb:directors' %}">Directors</a></li>
+    <li><a href="{% url 'imdb:years' %}">Release Years</a></li>
+  </ul>
+
+</body>
+</html>
