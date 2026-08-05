@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+  <strong>All Quotes</strong>
+  <ul>
+    {% for quote in quotes %}
+    <li><a href="{% url 'quote:detail' quote.slug %}">{{quote}}</a></li>
+    {% endfor %}
+  </ul>
+  <strong>Create a quote</strong>
+  <ul>
+    <li><a href="{%url 'quote:create' %}">New Quote</a></li>
+  </ul>
+</body>
+</html>

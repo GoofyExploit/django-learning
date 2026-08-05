@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedbacks</title>
+</head>
+<body>
+  <strong>All Feedbacks</strong> <br>
+  <ul>
+    {% for feedback in feedbacks %}
+    <li><a href="{% url 'feedback:detail' feedback.slug %}">{{feedback}}</a> <br></li>
+    {% endfor %}
+  </ul>
+  <strong>Create a feedback</strong>
+  <ul>
+    <li><a href="{% url 'feedback:create' %}">Feedback Form</a></li>
+  </ul>
+</body>
+</html>
