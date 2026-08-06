@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entry</title>
+</head>
+<body>
+  <strong>Title: </strong> {{journal.title}} <br><br>
+  <strong>Mood: </strong> {{journal.mood}} <br><br>
+  <strong>Entry: </strong> {{journal.entry}} <br><br>
+  <strong>Date: </strong> {{journal.date}} <br><br>
+  <strong><u><i>Create a new Entry</i></u></strong> <br>
+  <ul>
+    <li><a href="{% url 'journal:create' %}">New Entry</a></li>
+  </ul>
+</body>
+</html>

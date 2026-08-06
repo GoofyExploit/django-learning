@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journals</title>
+</head>
+<body>
+  <strong><u><i>All Journals</i></u></strong> <br>
+  <ul>
+    {% for journal in journals %}
+    <li><a href="{% url 'journal:detail' journal.slug %}">{{journal}}</a></li>
+    {% endfor %}
+  </ul>
+
+    <strong><u><i>Create a new Entry</i></u></strong> <br>
+  <ul>
+    <li><a href="{% url 'journal:create' %}">New Entry</a></li>
+  </ul>
+</body>
+</html>
