@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <strong><i><u>Task Manager</u></i></strong>
+    <ul>
+      <li><a href="{% url 'task:list' %}">All Tasks</a></li>
+    </ul>
+    <strong><i><u>Create a Task</u></i></strong>
+    <ul>
+      <li><a href="{% url 'task:create' %}">New Task</a></li>
+    </ul>
+  </body>
+</html>
