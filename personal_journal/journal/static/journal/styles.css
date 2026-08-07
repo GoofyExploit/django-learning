@@ -1,0 +1,35 @@
+html,
+body {
+  height: 100%;
+}
+nav ul li {
+  list-style-type: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: red;
+}
+nav {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-left: -42px;
+  margin-top: -10px;
+  background-color: lightblue;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+footer {
+  text-align: center;
+}
+main {
+  flex: 1;
+}

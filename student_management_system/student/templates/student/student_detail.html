@@ -1,0 +1,17 @@
+{% extends 'student/base.html' %}
+{% block title %}Student Details{% endblock %}
+{% block content %}
+<div class="student_detail">
+    <strong>Name: </strong> {{student.name}} <br><br>
+    <strong>Roll No: </strong> {{student.roll_no}} <br><br>
+    <strong>Course: </strong> {{student.course}} <br><br>
+    <strong>Year: </strong> {{student.year}} <br><br>
+    <strong>Email: </strong> {{student.email}} <br><br>
+</div>
+<div class="btn">
+  <a class="edit" href="{% url 'student:update' student.slug %}">Edit</a>
+</div>
+<div class="btn">
+  <a class="delete" href="{% url 'student:delete' student.slug %}">Delete</a>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'notes/style.css' %}" />
+    <title>Delete</title>
+  </head>
+  <body>
+    <div class="confirm">
+      <form class="del" method="post">
+        {% csrf_token %}
+        <button class="delete" type="submit">Yes, Delete</button>
+      </form>
+      <a class="del" href="{% url 'notes:detail' note.slug%}">Cancel</a>
+    </div>
+  </body>
+</html>

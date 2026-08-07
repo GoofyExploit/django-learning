@@ -1,0 +1,9 @@
+{% extends 'notes/base.html' %}
+{% block title %}Journals{% endblock %}
+{% block content %}
+<ul>
+  {% for note in notes %}
+  <li><a href="{% url 'notes:detail' note.slug %}">{{note}}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}

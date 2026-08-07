@@ -1,0 +1,9 @@
+{% extends 'notes/base.html' %} {% block title %}New Note{% endblock %}
+{% block content %}
+<div class="note_form">
+  <form method="post">
+    {% csrf_token %} {{form.as_p}}
+    <button>Submit</button>
+  </form>
+</div>
+{% endblock %}

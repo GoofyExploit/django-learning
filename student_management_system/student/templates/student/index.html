@@ -1,0 +1,9 @@
+{% extends 'student/base.html' %} {% block title %}Home Page{% endblock %} 
+{% block content %}
+<div class="student">
+  <ul>
+    <li><a href="{% url 'student:list' %}">All Students</a></li>
+    <li><a href="{% url 'student:create' %}">Add Student</a></li>
+  </ul>
+</div>
+{% endblock %}

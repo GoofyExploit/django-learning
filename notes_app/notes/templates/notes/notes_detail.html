@@ -1,0 +1,10 @@
+{% extends 'notes/base.html' %} {% block title %}Details Page{% endblock %}
+{% block content %}
+<div style="margin-top: 20px; margin-left: 20px;">
+  <strong>Title: </strong> {{note.title}} <br /><br />
+  <strong>Category: </strong> {{note.category}} <br /><br />
+  <strong>Content: </strong> {{note.content}} <br /><br />
+</div>
+<a class="btn" href="{% url 'notes:update' note.slug %}">Edit</a>
+<a class="btn" href="{% url 'notes:delete' note.slug %}">Delete</a>
+{% endblock %}

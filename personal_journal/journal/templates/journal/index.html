@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
-</head>
-<body>
+{% extends "journal/base.html" %}
+{% block title %} Home Page {% endblock %}
+{% block content %}
   <ul>
     <li><a href="{% url 'journal:list' %}">All Journals</a></li>
     <li><a href="{% url 'journal:create' %}">Create a new entry</a></li>
   </ul>
-</body>
-</html>
+  {% endblock %}

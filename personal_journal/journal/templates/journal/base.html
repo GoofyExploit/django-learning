@@ -1,0 +1,24 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'journal/styles.css' %}">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="{% url 'journal:index' %}">Home</a></li>
+        <li><a href="{% url 'journal:about' %}">About</a></li>
+        <li><a href="{% url 'journal:contact' %}">Contact</a></li>
+      </ul>
+    </nav>
+    <main>{% block content %} {% endblock %}</main>
+    <footer>
+      <hr />
+      <p>&copy; 2026 Personal Journal</p>
+    </footer>
+  </body>
+</html>

@@ -1,11 +1,17 @@
 from django.shortcuts import render
 from journal.models import Journal
-from django.views.generic import TemplateView, ListView, DetailView, CreateView
+from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 from journal.form import JournalForm
 
 # Create your views here.
 class JournalIndexView(TemplateView):
     template_name = "journal/index.html"
+
+def about(request):
+    return render(request, 'journal/about.html')
+
+def contact(request):
+    return render(request, 'journal/contact.html')
 
 class JournalListView(ListView):
     model = Journal
